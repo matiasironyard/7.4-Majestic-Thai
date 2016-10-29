@@ -1,5 +1,8 @@
 var React = require('react');
 var Backbone = require('backbone');
+var ReactDOM = require('react-dom');
+var $ = require('jquery');
+
 require('backbone-react-component');
 require('../router').router;
 
@@ -11,23 +14,28 @@ var MenuListing = React.createClass({
   mixins: [Backbone.React.Component.mixin],
   getDefaultProps: function(){
     var collection = new DishesCollection();
+    console.log(collection);
     return {
       collection: collection
     }
   },
-  componentWillMount: function(){
+
+componentWillMount: function(){
     this.props.collection.fetch();
   },
 
-  // handleClick: function(e){
-  //   e.preventDefault();
-  //
-  // },
+handleDishClick: function(item){
+  var orderDish = item.toJSON();
+  delete orderitem._id
+  this.state.orderList.add([orderItem]);
+  this.setState({orderList: this.state.orderList});
+},
 
   render: function(){
-    var listOfDishes = this.props.collection.map(function(dish){
-      return <li className="dishes" key={dish.get('_.id') || dish.cid} >
-        <span>{dish.get('dish')}</span><span>{dish.get('description')}</span><span>{dish.get('price')}</span>
+    var listOfDishes = this.props.collection.map(function(item){
+      var handleDishClick = this.handleDishClick.bind(this, item);
+      return <li className="dishes" onClick={this.handleDishClick} key={item.get('_.id') || item.cid}>
+        <span>{item.get('dish')}</span><span>{item.get('description')}</span><span>{item.get('price')}</span>
       </li>
     });
     return(
@@ -37,11 +45,24 @@ var MenuListing = React.createClass({
             {listOfDishes}
           </ul>
       </div>
-
     )
   }
-
 });
+
+// var OrderCheckout = React.creatClass({
+//   mixins: [Backbone.React.Component.mixin],
+//
+// render: function(){
+//   var Order = this.props.collection.map(function(dish)){
+//     return <li className="order"></li>
+//
+//   }
+// }
+// });
+
+
+
+
 
 var MenuOrderComponent = React.createClass({
   mixins: [Backbone.React.Component.mixin],
@@ -49,13 +70,12 @@ var MenuOrderComponent = React.createClass({
     return(
       <TemplateComponent>
         <MenuListing/>
-
-
       </TemplateComponent>
 
     )
   }
 });
+
 
 
 module.exports={
