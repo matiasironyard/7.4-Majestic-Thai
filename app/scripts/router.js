@@ -2,7 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Backbone = require('backbone');
 
-var MenuOrderComponent = require('./components/menu_order.jsx').MenuOrderComponent;
+var MenuOrderContainer = require('./components/menu_order.jsx').MenuOrderContainer;
 var DishesCollection = require('./models/menu.js').DishesCollection;
 
 var AppRouter = Backbone.Router.extend({
@@ -19,7 +19,7 @@ index: function(){
 
 console.log(AppRouter);
   ReactDOM.render(
-    React.createElement(MenuOrderComponent),
+    React.createElement(MenuOrderContainer),
     document.getElementById('app')
   );
 },

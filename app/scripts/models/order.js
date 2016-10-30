@@ -2,10 +2,7 @@ var Backbone = require('backbone');
 
 var Order = Backbone.Model.extend({
   defaults: {
-    dish: '',
-    price: '',
-    quantity: '',
-    total: '',
+    idAttribute: '_id'
   }
 });
 

@@ -7,45 +7,62 @@ require('backbone-react-component');
 require('../router').router;
 
 var DishesCollection = require('../models/menu').DishesCollection;
+var OrdersCollection = require('../models/menu').OrdersCollection;
 var TemplateComponent = require('./template.jsx').TemplateComponent;
+var Checkout = require('./order.jsx').CheckoutComponent;
 
 
 var MenuListing = React.createClass({
   mixins: [Backbone.React.Component.mixin],
-  getDefaultProps: function(){
-    var collection = new DishesCollection();
-    console.log(collection);
+  getInitialState: function(){
+    var currentOrders = new OrdersCollection();
+    console.log(currentOrders);
     return {
-      collection: collection
+      currentOrders: currentOrders
     }
   },
 
-componentWillMount: function(){
-    this.props.collection.fetch();
-  },
+// componentWillMount: function(){
+//     this.props.ordersCollection.fetch();
+//   },
 
-handleDishClick: function(item){
-  var orderDish = item.toJSON();
-  delete orderitem._id
-  this.state.orderList.add([orderItem]);
-  this.setState({orderList: this.state.orderList});
+handleDishClick: function(dish){
+  var orderDish = dish.toJSON();
+  console.log('order dish', orderDish);
+  delete orderDish._id
+  this.state.currentOrders.add([orderDish]);
+  this.setState({currentOrders: this.state.currentOrders});
 },
 
   render: function(){
-    var listOfDishes = this.props.collection.map(function(item){
-      var handleDishClick = this.handleDishClick.bind(this, item);
-      return <li className="dishes" onClick={this.handleDishClick} key={item.get('_.id') || item.cid}>
-        <span>{item.get('dish')}</span><span>{item.get('description')}</span><span>{item.get('price')}</span>
+    var collection = this.getCollection();
+    console.log('collection', collection);
+    var listOfDishes = collection.map(function(dish){
+      // console.log(this.props.collection);
+      // console.warn(dish);
+      var handleDishClick = this.handleDishClick.bind(this, dish);
+      return (
+      <li onClick={handleDishClick} className="dishes" key={dish.get('_.id') || dish.cid}>
+        <span>{dish.get('dish')}</span><span>{dish.get('description')}</span> <span>{dish.get('price')}</span>
       </li>
-    });
+    );
+  }.bind(this));
     return(
-      <div className="col-md-offset-1 col-md-6 menu-col">
-        <h3 className="menu">Menu</h3>
-          <ul>
-            {listOfDishes}
+      <div>
+        <div className="col-md-offset-1 col-md-6 menu-col">
+          <h3 className="menu">Menu</h3>
+            <ul>
+              {listOfDishes}
+            </ul>
+        </div>
+        <div className="col-md-4 order-col">
+          <h4 className="menu">Order</h4>
+          <ul className="order-list-view">
+            <Checkout currentOrders ={this.state.currentOrders} />
           </ul>
+        </div>
       </div>
-    )
+    );
   }
 });
 
@@ -60,12 +77,15 @@ handleDishClick: function(item){
 // }
 // });
 
-
-
-
-
-var MenuOrderComponent = React.createClass({
+var MenuOrderContainer = React.createClass({
   mixins: [Backbone.React.Component.mixin],
+  getDefaultProps: function(){
+    var collection = new DishesCollection();
+    collection.fetch();
+    return{
+      collection: collection
+    }
+  },
   render: function(){
     return(
       <TemplateComponent>
@@ -76,8 +96,6 @@ var MenuOrderComponent = React.createClass({
   }
 });
 
-
-
 module.exports={
-  MenuOrderComponent:MenuOrderComponent,
+  MenuOrderContainer:MenuOrderContainer,
 }

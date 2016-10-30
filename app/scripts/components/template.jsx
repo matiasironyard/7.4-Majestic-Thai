@@ -16,18 +16,7 @@ var TemplateComponent = React.createClass ({
             <h1 className="well">Thai Restaurant</h1>
           </div>
           {this.props.children}
-          <div className="col-md-4 order-col">
-            <h4 className="menu">Order</h4>
-            <ul className="order-list-view">
-              <li className="order-item-view">food</li>
-              <li className="order-item-view">food</li>
-              <li className="order-item-view">food</li>
-              <li className="order-item-view">food</li>
-            </ul>
-            <div className="order-total-view">
-              total
-            </div>
-          </div>
+
         </div>
         <div className="col-md-8-fluid footer">
           FOOTER
