@@ -5,8 +5,15 @@ require('backbone-react-component');
 
 var CheckoutComponent = React.createClass({
   mixins: [Backbone.React.Component.mixin],
+  getInitialState: function(){
+    return{
+      dish: '',
+      price: '',
+    }
+  },
   handleSubmit: function(e){
     e.preventDefault();
+    // this.setState();
     this.props.currentOrders.each(function(order){
       order.save()
     });
@@ -26,18 +33,23 @@ render: function(){
   // });
   // var convertedPrices = prices.map(Number);
   // console.warn(convertedPrices);
-  var total = this.props.currentOrders.reduce(function(previous, currentDish){
+  var subtotal = this.props.currentOrders.reduce(function(previous, currentDish){
     previous = Number(previous)
     currentDish = Number(currentDish.get('price'))
     return previous + currentDish;
   },0)
+  var tax = subtotal * (6/100)
+
+  var total = subtotal + tax
   return(
     <div className="orctive-order">
       <h4 className="order-pane-title">Order</h4>
       <ul className="order-list-ul">
         {OrderedDishes}
       </ul>
-        <div className="checkout-subtotal">Subtotal: ${total.toFixed(2)}</div><button type="submit" className="btn btn-success" onClick={this.handleSubmit}>Place Your Order</button>
+        <div className="checkout-subtotal">Subtotal: ${subtotal.toFixed(2)}</div>
+        <div className="checkout-tax">Tax (6%): ${tax.toFixed(2)}</div>
+        <div className="checkout-total">Total: ${total.toFixed(2)}</div><button type="submit" className="btn btn-success" onClick={this.handleSubmit}>Place Your Order</button>
   </div>
   );
 }

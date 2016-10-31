@@ -167,8 +167,18 @@ body{
     }
     .checkout-subtotal{
       font-weight: bold;
-      float: right;
-
+      display: block;
+      text-align: right;
+    }
+    .checkout-tax{
+      font-weight: bold;
+      display: block;
+      text-align: right;
+    }
+    .checkout-total{
+      font-weight: bold;
+      display: block;
+      text-align: right;
     }
     .btn-success{
       margin-top: 30px;
