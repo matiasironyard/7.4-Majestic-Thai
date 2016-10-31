@@ -5782,7 +5782,6 @@ body {
     background-attachment: scroll;
     -webkit-perspective: 1px;
             perspective: 1px;
-    height: 50vh;
     overflow-x: hidden;
     overflow-y: auto; }
     .container-fluid .header-col .header-title {
