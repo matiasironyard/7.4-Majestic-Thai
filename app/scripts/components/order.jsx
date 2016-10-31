@@ -43,7 +43,7 @@ render: function(){
   var total = subtotal + tax
   return(
     <div className="orctive-order">
-      <h4 className="order-pane-title">Order</h4>
+      <h4 className="order-pane-title">Your Order</h4>
       <ul className="order-list-ul">
         {OrderedDishes}
       </ul>
