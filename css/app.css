@@ -5775,50 +5775,41 @@ body {
   .container-fluid .nav-bar-col .nav-tabs {
     float: right; }
   .container-fluid .header-col {
-    height: 400px;
+    height: 30vw;
     background-color: #000;
     background-image: url("https://a2photographyblog.files.wordpress.com/2014/01/img_4093.jpg");
-    background-size: cover; }
+    background-size: cover;
+    box-shadow: 1px 17px 5px 0px rgba(0, 0, 0, 0.75); }
     .container-fluid .header-col .header-title {
       position: relative;
       margin: 0 auto;
       padding: 50px;
       margin-top: 50px;
-      width: 1000px;
+      width: 80vw;
       border: 2px solid white;
       background-color: rgba(0, 0, 0, 0.8); }
       .container-fluid .header-col .header-title .restaurant-name {
         color: #fff;
         font-family: 'Cinzel Decorative', cursive;
-        font-size: 70px;
+        font-size: 6vw;
         text-align: center; }
       .container-fluid .header-col .header-title .subtitle {
         color: #fff;
         font-family: 'Poiret One', cursive;
-        font-size: 40px;
+        font-size: 4vw;
         text-align: center;
         border-top: 1px solid #fff;
         margin: 0 auto;
-        width: 400px;
+        width: 30vw;
         padding-top: 30px; }
-      .container-fluid .header-col .header-title .title-logo {
-        display: -webkit-inline-box;
-        display: -ms-inline-flexbox;
-        display: inline-flex;
-        position: absolute;
-        bottom: 10px;
-        left: 650px;
-        width: 250px;
-        height: 250px;
-        background-image: url("http://www.pd4pic.com/images/green-outline-drawing-leaf-cartoon-free-color.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        z-index: 0; }
   .container-fluid .menu-col {
     padding-top: 50px;
-    background-color: #F4F1EB; }
+    background-color: #F4F1EB;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; }
     .container-fluid .menu-col .menu-title {
       font-family: 'Cinzel Decorative', cursive;
+      font-size: 30px;
       padding-bottom: 10px;
       margin-bottom: 0px;
       border-bottom: 1px solid;
@@ -5832,7 +5823,8 @@ body {
         box-shadow: 0px 6px 5px -2px rgba(0, 0, 0, 0.11);
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-right: 20px; }
+        padding-right: 20px;
+        border-bottom-right-radius: 10px; }
         .container-fluid .menu-col .menu-list-col .Menu-ul .dishes-li .menu-icon {
           display: -webkit-inline-box;
           display: -ms-inline-flexbox;
@@ -5870,7 +5862,7 @@ body {
     padding-left: 20px;
     padding-bottom: 20px;
     background-color: rgba(227, 213, 187, 0.5);
-    box-shadow: -4px 10px 17px 0px rgba(227, 213, 187, 0.26); }
+    box-shadow: inset 2px 3px 12px -1px rgba(0, 0, 0, 0.75); }
     .container-fluid .order-col .order-list-ul {
       list-style-type: none; }
       .container-fluid .order-col .order-list-ul li {
@@ -5882,6 +5874,7 @@ body {
         padding-left: 15px; }
     .container-fluid .order-col .order-pane-title {
       font-family: 'Poiret One', cursive;
+      padding-bottom: 10px;
       border-bottom: 1px solid;
       border-bottom-color: lightgrey;
       border-bottom-right-radius: 20px;
@@ -5919,4 +5912,5 @@ body {
   height: 30px;
   background-image: url("http://teaminnova.com/wp-content/uploads/2015/12/facebookgrey.png");
   background-size: contain; }
+
 /*# sourceMappingURL=app.css.map */
