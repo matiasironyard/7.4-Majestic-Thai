@@ -17,7 +17,6 @@ var TemplateComponent = React.createClass ({
             <div className="header-title">
               <h1 className="restaurant-name">Majestic Thai</h1>
               <h3 className="subtitle">East Meets West</h3>
-              <div className="title-logo"></div>
             </div>
           </div>
           <div className="col-md-offset-1 col-md-10 menu-col">
