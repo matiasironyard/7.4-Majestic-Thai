@@ -35,7 +35,8 @@ handleDishClick: function(dish){
 },
 
   render: function(){
-    var collection = this.getCollection();
+    var menuCollection = this.getCollection();
+    var collection = this.getCollection().sort();
     console.log('collection', collection);
     var listOfDishes = collection.map(function(dish){
       // console.log(this.props.collection);
@@ -83,6 +84,7 @@ var MenuOrderContainer = React.createClass({
       collection: collection
     }
   },
+
   render: function(){
     return(
       <TemplateComponent>

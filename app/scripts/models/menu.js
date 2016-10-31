@@ -12,7 +12,9 @@ var DishesCollection = Backbone.Collection.extend({
 
   model: Dish,
   url: "https://tiny-lasagna-server.herokuapp.com/collections/mmthaimenu",
-
+  comparator: function(Dish){
+  return Dish.get('_id');
+}
 });
 
 

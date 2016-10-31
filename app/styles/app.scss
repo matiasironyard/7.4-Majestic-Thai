@@ -23,15 +23,24 @@ body{
 .container-fluid{
   background-color: #2F2D28;
   margin-top: 30px;
-  .nav-tabs{
-    float: right;
+  .nav-bar-col{
+    
+    .nav-tabs{
+      float: right;
+    }
   }
   .header-col{
     height: 400px;
     background-color: #000;
     background-image: url("https://a2photographyblog.files.wordpress.com/2014/01/img_4093.jpg");
     background-size: cover;
+    background-attachment: scroll;
     // box-shadow: 0px 4px 10px #0f0f0f;
+    perspective: 1px;
+    height: 50vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+
     .header-title{
       position: relative;
       margin: 0 auto;
@@ -123,15 +132,30 @@ body{
     padding-left: 20px;
     padding-bottom: 20px;
     background-color: rgba(0, 0, 0, 0.1);
+    .order-list-ul{
+      list-style-type: none;
+      li{
+        border-bottom: 1px solid #F4F1EB;
+        padding-bottom: 5px;
+        padding-top: 5px;
+      }
+      .checkout-dish{
+      }
+      .checkout-price{
+        text-align: right;
+        padding-left: 15px;
+      }
+    }
     .order-pane-title{
       font-family: 'Poiret One', cursive;
     }
     .checkout-subtotal{
       font-weight: bold;
+      float: right;
+
     }
     .btn-success{
-      margin-top: 20px;
-      float: right;
+      margin-top: 30px;
     }
   }
   .footer{

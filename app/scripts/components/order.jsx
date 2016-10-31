@@ -16,9 +16,9 @@ render: function(){
     var dish = item.get('dish');
     var price = item.get('price');
     return(
-      <div key={item.cid}>
-        <div className="checkout-dish">{dish}</div><div className="checkout-price">{price}</div>
-      </div>
+      <li key={item.cid}>
+        <div className="checkout-dish">{dish}</div><div className="checkout-price">${price}</div>
+      </li>
     )
   });
   // var prices = OrderedDishes.map(function(item){
@@ -34,7 +34,7 @@ render: function(){
   return(
     <div className="orctive-order">
       <h4 className="order-pane-title">Order</h4>
-      <ul className="order-list-view">
+      <ul className="order-list-ul">
         {OrderedDishes}
       </ul>
         <div className="checkout-subtotal">Subtotal: ${total.toFixed(2)}</div><button type="submit" className="btn btn-success" onClick={this.handleSubmit}>Place Your Order</button>
@@ -42,8 +42,6 @@ render: function(){
   );
 }
 });
-
-
 
 module.exports = {
   CheckoutComponent: CheckoutComponent
