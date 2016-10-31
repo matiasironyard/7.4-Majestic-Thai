@@ -5818,11 +5818,18 @@ body {
     padding-top: 50px;
     background-color: #F4F1EB; }
     .container-fluid .menu-col .menu-title {
-      font-family: 'Cinzel Decorative', cursive; }
+      font-family: 'Cinzel Decorative', cursive;
+      padding-bottom: 10px;
+      margin-bottom: 0px;
+      border-bottom: 1px solid;
+      border-bottom-color: lightgrey;
+      box-shadow: 0px 6px 5px -2px rgba(0, 0, 0, 0.11); }
     .container-fluid .menu-col .menu-list-col .Menu-ul {
       list-style-type: none; }
       .container-fluid .menu-col .menu-list-col .Menu-ul .dishes-li {
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid;
+        border-bottom-color: lightgrey;
+        box-shadow: 0px 6px 5px -2px rgba(0, 0, 0, 0.11);
         padding-top: 10px;
         padding-bottom: 10px;
         padding-right: 20px; }
@@ -5853,12 +5860,17 @@ body {
           color: #616D71;
           text-align: right; }
       .container-fluid .menu-col .menu-list-col .Menu-ul .dishes-li:hover {
-        background-color: rgba(0, 0, 0, 0.1); }
+        padding-left: 20px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid;
+        border-bottom-color: lightgrey;
+        box-shadow: 0px 6px 5px -2px rgba(0, 0, 0, 0.5); }
   .container-fluid .order-col {
-    border-left: 1px solid #998D78;
+    border-radius: 10px;
     padding-left: 20px;
     padding-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.1); }
+    background-color: rgba(227, 213, 187, 0.5);
+    box-shadow: -4px 10px 17px 0px rgba(227, 213, 187, 0.26); }
     .container-fluid .order-col .order-list-ul {
       list-style-type: none; }
       .container-fluid .order-col .order-list-ul li {
@@ -5869,7 +5881,11 @@ body {
         text-align: right;
         padding-left: 15px; }
     .container-fluid .order-col .order-pane-title {
-      font-family: 'Poiret One', cursive; }
+      font-family: 'Poiret One', cursive;
+      border-bottom: 1px solid;
+      border-bottom-color: lightgrey;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0px 6px 5px -2px rgba(0, 0, 0, 0.11); }
     .container-fluid .order-col .checkout-subtotal {
       font-weight: bold;
       float: right; }
