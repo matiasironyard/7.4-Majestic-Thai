@@ -5777,8 +5777,9 @@ body {
   .container-fluid .header-col {
     height: 30vw;
     background-color: #000;
-    background-image: url("https://a2photographyblog.files.wordpress.com/2014/01/img_4093.jpg");
+    background-image: url("https://mandeephooda.files.wordpress.com/2014/02/historic-house-thailand.jpg");
     background-size: cover;
+    background-position: center;
     box-shadow: 1px 17px 5px 0px rgba(0, 0, 0, 0.75); }
     .container-fluid .header-col .header-title {
       position: relative;
