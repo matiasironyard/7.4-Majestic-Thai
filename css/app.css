@@ -5779,7 +5779,6 @@ body {
     background-color: #000;
     background-image: url("https://a2photographyblog.files.wordpress.com/2014/01/img_4093.jpg");
     background-size: cover;
-    background-attachment: scroll;
     -webkit-perspective: 1px;
             perspective: 1px;
     overflow-x: hidden;
