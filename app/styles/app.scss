@@ -24,7 +24,7 @@ body{
   background-color: #2F2D28;
   margin-top: 30px;
   .nav-bar-col{
-    
+
     .nav-tabs{
       float: right;
     }
@@ -34,12 +34,11 @@ body{
     background-color: #000;
     background-image: url("https://a2photographyblog.files.wordpress.com/2014/01/img_4093.jpg");
     background-size: cover;
-    background-attachment: scroll;
+    // background-attachment: scroll;
     // box-shadow: 0px 4px 10px #0f0f0f;
-    perspective: 1px;
-    height: 50vh;
-    overflow-x: hidden;
-    overflow-y: auto;
+    // perspective: 1px;
+    // overflow-x: hidden;
+    // overflow-y: auto;
 
     .header-title{
       position: relative;
@@ -87,12 +86,19 @@ body{
   background-color: #F4F1EB;
   .menu-title{
     font-family: 'Cinzel Decorative', cursive;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid;
+    border-bottom-color: lightgrey;
+    box-shadow: 0px 6px 5px -2px rgba(0,0,0,0.11);
   }
   .menu-list-col{
     .Menu-ul{
       list-style-type: none;
       .dishes-li{
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid;
+        border-bottom-color: lightgrey;
+        box-shadow: 0px 6px 5px -2px rgba(0,0,0,0.11);
         padding-top: 10px;
         padding-bottom: 10px;
         padding-right: 20px;
@@ -122,16 +128,22 @@ body{
         }
       }
       .dishes-li:hover{
+        padding-left: 20px;
         background-color: rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid;
+        border-bottom-color: lightgrey;
+        box-shadow: 0px 6px 5px -2px rgba(0,0,0,0.5);
       }
     }
   }
 }
   .order-col{
-    border-left: 1px solid #998D78;
+    border-radius: 10px;
     padding-left: 20px;
     padding-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(227,213,187, 0.5);
+    box-shadow: -4px 10px 17px 0px rgba(227,213,187,0.26);
+
     .order-list-ul{
       list-style-type: none;
       li{
@@ -148,6 +160,10 @@ body{
     }
     .order-pane-title{
       font-family: 'Poiret One', cursive;
+      border-bottom: 1px solid;
+      border-bottom-color: lightgrey;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0px 6px 5px -2px rgba(0,0,0,0.11);
     }
     .checkout-subtotal{
       font-weight: bold;

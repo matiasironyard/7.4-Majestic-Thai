@@ -28,7 +28,7 @@ var MenuListing = React.createClass({
 
 handleDishClick: function(dish){
   var orderDish = dish.toJSON();
-  console.log('order dish', orderDish);
+  console.log('order dish toJSON', orderDish);
   delete orderDish._id
   this.state.currentOrders.add([orderDish]);
   this.setState({currentOrders: this.state.currentOrders});
@@ -50,7 +50,7 @@ handleDishClick: function(dish){
   }.bind(this));
     return(
       <div>
-        <div className="col-md-offset-2 col-md-6 menu-list-col">
+        <div className="col-md-offset-1 col-md-7 menu-list-col">
           <h3 className="menu-title">Menu</h3>
           <ul className="Menu-ul">
             {listOfDishes}
