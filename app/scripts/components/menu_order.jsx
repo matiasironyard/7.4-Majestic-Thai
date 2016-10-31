@@ -42,24 +42,21 @@ handleDishClick: function(dish){
       // console.warn(dish);
       var handleDishClick = this.handleDishClick.bind(this, dish);
       return (
-      <li onClick={handleDishClick} className="dishes" key={dish.get('_.id') || dish.cid}>
-        <span>{dish.get('dish')}</span><span>{dish.get('description')}</span> <span>{dish.get('price')}</span>
+      <li onClick={handleDishClick} className="dishes-li" key={dish.get('_.id') || dish.cid}>
+        <div className="menu-icon"></div><div className="menu-dish">{dish.get('dish')}</div><div className="menu-price">${dish.get('price')}</div><div className="menu-description">{dish.get('description')}</div>
       </li>
     );
   }.bind(this));
     return(
       <div>
-        <div className="col-md-offset-1 col-md-6 menu-col">
-          <h3 className="menu">Menu</h3>
-            <ul>
-              {listOfDishes}
-            </ul>
-        </div>
-        <div className="col-md-4 order-col">
-          <h4 className="menu">Order</h4>
-          <ul className="order-list-view">
-            <Checkout currentOrders ={this.state.currentOrders} />
+        <div className="col-md-offset-2 col-md-6 menu-list-col">
+          <h3 className="menu-title">Menu</h3>
+          <ul className="Menu-ul">
+            {listOfDishes}
           </ul>
+        </div>
+        <div className="col-md-offset-1 col-md-3 order-col">
+            <Checkout currentOrders ={this.state.currentOrders} />
         </div>
       </div>
     );

@@ -15,3 +15,142 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 img {
   max-width: 100%;
 }
+
+body{
+   background-color: #2F2D28;
+}
+
+.container-fluid{
+  background-color: #2F2D28;
+  margin-top: 30px;
+  .nav-tabs{
+    float: right;
+  }
+  .header-col{
+    height: 400px;
+    background-color: #000;
+    background-image: url("https://a2photographyblog.files.wordpress.com/2014/01/img_4093.jpg");
+    background-size: cover;
+    // box-shadow: 0px 4px 10px #0f0f0f;
+    .header-title{
+      position: relative;
+      margin: 0 auto;
+      padding: 50px;
+      margin-top: 50px;
+      width: 1000px;
+      border: 2px solid white;
+      background-color: rgba(0, 0, 0, 0.8);
+
+      .restaurant-name{
+        color: #fff;
+        font-family: 'Cinzel Decorative', cursive;
+        font-size: 70px;
+        text-align: center;
+      }
+
+      .subtitle{
+        color: #fff;
+        font-family: 'Poiret One', cursive;
+        font-size: 40px;
+        text-align: center;
+        border-top: 1px solid #fff;
+        margin: 0 auto;
+        width: 400px;
+        padding-top: 30px;
+      }
+
+      .title-logo{
+        display: inline-flex;
+        position: absolute;
+        bottom: 10px;
+        left: 650px;
+        width: 250px;
+        height: 250px;
+        background-image: url("http://www.pd4pic.com/images/green-outline-drawing-leaf-cartoon-free-color.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 0;
+      }
+    }
+  }
+.menu-col{
+  padding-top: 50px;
+  background-color: #F4F1EB;
+  .menu-title{
+    font-family: 'Cinzel Decorative', cursive;
+  }
+  .menu-list-col{
+    .Menu-ul{
+      list-style-type: none;
+      .dishes-li{
+        border-bottom: 1px solid grey;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 20px;
+        .menu-icon{
+          display: inline-flex;
+          width: 20px;
+          height: 20px;
+          background-image: url("http://www.pd4pic.com/images/green-outline-drawing-leaf-cartoon-free-color.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+        .menu-dish{
+          display: inline-flex;
+          font-family: 'Josefin Sans', sans-serif;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        .menu-description{
+          color: #616D71;
+          padding-left: 20px;
+        }
+        .menu-price{
+          display: inline-flex;
+          float: right;
+          color: #616D71;
+          text-align: right;
+        }
+      }
+      .dishes-li:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+  .order-col{
+    border-left: 1px solid #998D78;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    .order-pane-title{
+      font-family: 'Poiret One', cursive;
+    }
+    .checkout-subtotal{
+      font-weight: bold;
+    }
+    .btn-success{
+      margin-top: 20px;
+      float: right;
+    }
+  }
+  .footer{
+    background-color: #2F2D28;
+    margin: 15px;
+    text-align: center;
+    color: #616D71;
+    .footer-title{
+      font-family: 'Cinzel Decorative', cursive;
+    }
+  }
+}
+.facebook{
+  display: inline-flex;
+  float: right;
+  position: relative;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  background-image: url("http://teaminnova.com/wp-content/uploads/2015/12/facebookgrey.png");
+  background-size: contain;
+}

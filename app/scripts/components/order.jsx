@@ -17,7 +17,7 @@ render: function(){
     var price = item.get('price');
     return(
       <div key={item.cid}>
-        <span>{dish}</span><span>{price}</span>
+        <div className="checkout-dish">{dish}</div><div className="checkout-price">{price}</div>
       </div>
     )
   });
@@ -32,12 +32,12 @@ render: function(){
     return previous + currentDish;
   },0)
   return(
-    <div className="col-md-12 order-col">
-      <h4 className="menu">Order</h4>
+    <div className="orctive-order">
+      <h4 className="order-pane-title">Order</h4>
       <ul className="order-list-view">
         {OrderedDishes}
       </ul>
-        <span>Total: {total.toFixed(2)}</span><button type="submit" onClick={this.handleSubmit}>Place Your Order</button>
+        <div className="checkout-subtotal">Subtotal: ${total.toFixed(2)}</div><button type="submit" className="btn btn-success" onClick={this.handleSubmit}>Place Your Order</button>
   </div>
   );
 }
