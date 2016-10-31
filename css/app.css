@@ -5778,11 +5778,7 @@ body {
     height: 400px;
     background-color: #000;
     background-image: url("https://a2photographyblog.files.wordpress.com/2014/01/img_4093.jpg");
-    background-size: cover;
-    -webkit-perspective: 1px;
-            perspective: 1px;
-    overflow-x: hidden;
-    overflow-y: auto; }
+    background-size: cover; }
     .container-fluid .header-col .header-title {
       position: relative;
       margin: 0 auto;
