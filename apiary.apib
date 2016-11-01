@@ -1,0 +1,106 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# Majestic Thai
+
+The Majestic Thai API allows the restaurant owner to easily view and edit dishes from their menu. It also allows the owner to view orders.
+
+## View Dishes Collection [/dishes]
+
+### View All Dishes [GET]
+
+Get a collection of dishes from the Majestic Thai menu.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "_id":"58169a01e5ef250003415942",
+                "dish":"Mango With Sticky Rice (Seasonal)",
+                "description":"Sliced mango served with sweetened sticky rice and topped with coconut cream",
+                "price":"4.95"
+            },{
+                "_id":"581699d6e5ef250003415941",
+                "dish":"Panang Curry",
+                "description":"You choice of meet stewed with green beans and panang Curry sauce garnished with lime leaves.",
+                "price":"10.95"
+            }
+            ....
+        ]
+        
+## View Single Dish  [/dishes/:id]
+
+### View Single Dish [GET]
+
+View single item from from menu.
+
++ Response 200 (application/json)
+
+        {
+            "_id":"58169a01e5ef250003415942",
+            "dish":"Mango With Sticky Rice (Seasonal)",
+            "description":"Sliced mango served with sweetened sticky rice and topped with coconut cream",
+            "price":"4.95"
+        }
+        
+        
+## View Orders Collection [/orders]
+
+### View All Orders [GET]
+
+Get a collection of orders from the Majestic Thai menu.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "_id":"58169a01e5ef250003415942",
+                "username": "John Smith",
+                "time": "11:30",
+                "total": 15.95,
+                "items": [
+                    {
+                        "dish": "Pad Thai"
+                    },  {
+                        "dish": "Thai wings"
+                    }
+                ]
+            },  {
+                "_id":"58169a01e5ef250003415955",
+                "username": "Nancy Everheart",
+                "time": "11:40",
+                "total": 12.95,
+                "items": [
+                    {
+                        "dish": "Spring Rolls"
+                    },  {
+                        "dish": "Sticky Mango Rice"
+                    }
+                ]
+            }
+            ...
+        ]
+
+## View Single Order [/orders/:id]
+
+### View Single Order [GET]
+
+View single order.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "_id":"58169a01e5ef250003415942",
+                "username": "John Smith",
+                "time": "11:30",
+                "total": 15.95,
+                "items": [
+                    {
+                        "dish": "Pad Thai"
+                    },  {
+                        "dish": "Thai wings"
+                    }
+                ]
+            }
+        ]
