@@ -8,6 +8,7 @@ RESTAURANT MENU & ORDER
 
 The task of this project was to design and execute a front end application given ambiguous requirements by a client putting all the pieces together with Backbone + React in order to create dynamic frontend application.
 
+[CODE](https://github.com/matiasironyard/7.4-Majestic-Thai)
 
 [DEMO](https://matiasironyard.github.io/7.4-Majestic-Thai/)
 
